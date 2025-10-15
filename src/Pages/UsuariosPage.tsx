@@ -17,7 +17,7 @@ const UsuariosPage: React.FC = () => {
     id: 0,
     correo: "",
     contrasena: "",
-    rol: "Operador",
+    rol: "Administrador",
   });
 
   const [isEditing, setIsEditing] = useState(false);
@@ -58,7 +58,7 @@ const UsuariosPage: React.FC = () => {
         setMensaje("Usuario creado correctamente");
       }
 
-      setFormData({ id: 0, correo: "", contrasena: "", rol: "Operador" });
+      setFormData({ id: 0, correo: "", contrasena: "", rol: "Administrador" });
       setIsEditing(false);
       setShowForm(false);
       fetchUsuarios();
@@ -95,7 +95,7 @@ const UsuariosPage: React.FC = () => {
   };
 
   const cancelEditing = () => {
-    setFormData({ id: 0, correo: "", contrasena: "", rol: "Operador" });
+    setFormData({ id: 0, correo: "", contrasena: "", rol: "Administrador" });
     setIsEditing(false);
     setShowForm(false);
     setMensaje("");
